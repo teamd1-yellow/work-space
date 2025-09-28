@@ -18,7 +18,7 @@
 <body>
 
   <!-- 初期画面 -->
-  <header id="heroSection">
+  <div id="heroSection">
     <div>
       <h1>ソフトウェア開発</h1>
       <h1>みくじ</h1>
@@ -30,11 +30,11 @@
     </div>
 
     <!-- 抽選ボタン -->
-    <button id="drawButton">おみくじを引く</button>
-  </header>
+    <button id="drawButton" onclick="drawOmikuji();">おみくじを引く</button>
+  </div>
 
   <!-- 結果画面 -->
-  <main id="resultSection" hidden>
+  <div id="resultSection" class="d-none">
     <!-- 結果画像（JSで src を設定） -->
     <div>
       <img id="resultImage" alt="結果画像" />
@@ -68,9 +68,9 @@
 
     <!-- もう一度おみくじを引く -->
     <div>
-      <button id="retryButton">もう一度おみくじを引く</button>
+      <button type="button" id="retryButton" onclick="backToTopPage();">もう一度おみくじを引く</button>
     </div>
-  </main>
+  </div>
 
   <!-- フッター -->
   <footer id="siteFooter" role="contentinfo">
