@@ -1,0 +1,115 @@
+body {
+    height: 100vh;
+    --dot-bg: rgb(255, 222, 244);
+    --dot-color: linear-gradient(to bottom, #ccf2fe 0%, #fe9b53 100%);
+    --dot-size: 2px;
+    --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+
+/* google fonts */
+.rocknroll-one-regular {
+  font-family: "RocknRoll One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.aboutBox {
+    width: 400px;
+    height: auto;
+    background: #fffde8;
+    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+    border: dashed 2px #ffb03f;/*破線*/
+    border-radius: 9px;
+    margin-left: 10px;/*はみ出ないように調整*/
+    margin-right: 10px;/*はみ出ないように調整*/
+    padding: 5px 5px 5px 5px;
+}
+
+.developers {
+    width: 250px;
+    height: auto;
+    background: #fffde8;
+    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
+    border: dashed 2px #ffb03f;/*破線*/
+    border-radius: 9px;
+    margin-left: 10px;/*はみ出ないように調整*/
+    margin-right: 10px;/*はみ出ないように調整*/
+    padding: 5px 5px 5px 5px;
+}
+
+ul{
+    padding-left: 5px;
+}
+
+ul li {
+  color: rgb(51, 50, 50);
+  border-left: solid 8px orange;/*左側の線*/
+  background: whitesmoke;/*背景色*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  margin-bottom: 15px;/*下のバーとの余白*/
+  line-height: 1.5;
+  border-radius: 0 15px 15px 0;/*右側の角だけ丸く*/
+  padding: 7px;
+  list-style-type: none!important;
+}
+
+.resultBox {
+    width: 400px;
+    height: auto;
+}
+
+.resultBox {
+  display: inline-block;
+  position: relative;
+  padding: 2px;
+  border: dashed 2px #de7d9e; /* 内枠のスタイル */
+}
+ 
+.resultBox::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  top: -9px;
+  bottom: -9px;
+  left: -9px;
+  right: -9px;
+  border: solid 5px #db7093; /* 外枠のスタイル */
+  z-index: -1;
+}
+
+.fortuneTitle {
+    font-size: 5rem;
+}
+
+
+.button-style {
+    background:#fd7403;
+    color:#fff;
+    border-radius: 3em;
+    border-color: #fd7403;
+    padding: 10px 20px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    -ms-transition: 0.8s;
+    transition: 0.8s;
+
+}
+ 
+.button-style:hover {
+    background: transparent;
+    color: #fd7403;
+}
+ 
+ 

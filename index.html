@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ソフトウェア開発みくじ</title>
+  <title>(仮)運勢占いおみくじ</title>
+  <meta name="description" content="息抜きに運勢占いをどうぞ">
 
   <!-- Bootstrap -->
   <link
@@ -13,76 +14,98 @@
     crossorigin="anonymous"
   />
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- 初期画面 -->
-  <header id="heroSection">
-    <div>
-      <h1>ソフトウェア開発</h1>
-      <h1>みくじ</h1>
+  <div class="container d-flex align-item-center flex-column text-danger rocknroll-one-regular">
+    <div id="heroSection">
+      <div class="text-center mb-5">
+        <h1>(仮)運勢占い</h1>
+        <h1 class="mb-5">おみくじ</h1>
+      
+        <!-- 画像 -->
+        <div class="mb-5">
+          <img id="omikujiImage" alt="おみくじ" />
+        </div>
+
+        <!-- 抽選ボタン -->
+        <div class="align-item-center mb-5">
+          <button id="drawButton" type="button" class="button-style">おみくじを引く</button>
+        </div>
+      </div>
     </div>
 
-    <!-- 画像 -->
-    <div>
-      <img id="omikujiImage" alt="おみくじ" />
-    </div>
+      <!-- 結果画面 -->
+      <div id="resultSection" class="d-none">
+        <!-- 結果画像（JSで src を設定） -->
+        <div class="container d-flex justify-content-center align-items-center flex-column">
+          <div class="resultBox d-flex bg-white align-items-center flex-column mb-4">
+            <img id="resultImage" alt="結果画像" class="mb-4" />
+          
 
-    <!-- 抽選ボタン -->
-    <button id="drawButton">おみくじを引く</button>
-  </header>
+            <!-- 運勢(大吉/中吉…)-->
+            <div class="mb-4 pb-1">
+              <h1 id="resultFortuneKanji" aria-live="polite" class="fortuneTitle text-center">吉</h1>
+              <hr width="300">
+            </div>
 
-  <!-- 結果画面 -->
-  <main id="resultSection" hidden>
-    <!-- 結果画像（JSで src を設定） -->
-    <div>
-      <img id="resultImage" alt="結果画像" />
-    </div>
+            <!-- 本文 -->
+            <div class="px-5">
+              <p id="resultText">今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー</p>
+              <hr width="300">
+            </div>
 
-    <!-- 運勢(大吉/中吉…)-->
-    <div>
-      <h3 id="resultFortuneKanji" aria-live="polite"></h3>
-    </div>
+            <!-- ラッキー系 -->
+            <div class="luckyItems text-center mb-4">
+              <div>
+                <h4 class="mb-4">✽ ラッキー言語 ✽</h4>
+                <p id="luckyLangText">*******</p>
+                <hr width="300">
+              </div>
 
-    <!-- 本文 -->
-    <div>
-      <p id="resultText"></p>
-    </div>
+              <div>
+                <h4 class="mb-4">✽ ラッキーデータベース ✽</h4>
+                <p id="luckyDbText">*******</p>
+                <hr width="300">
+              </div>
 
-    <!-- ラッキー系 -->
-    <div>
-      <h4>✽ ラッキー言語 ✽</h4>
-      <p id="luckyLangText"></p>
-    </div>
+              <div>
+                <h4 class="mb-4">✽ ラッキーエディタ ✽</h4>
+                <p id="luckyEditorText">*******</p>
+              </div>
+            </div>
+            <!-- もう一度おみくじを引く -->
+            <div class="mb-4">
+              <button id="retryButton" type="button" class="button-style">もう一度おみくじを引く</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div>
-      <h4>✽ ラッキーデータベース ✽</h4>
-      <p id="luckyDbText"></p>
-    </div>
+    <!-- フッター -->
+    <footer id="siteFooter" role="contentinfo">
+      <div class="mb-4">
+        <a id="aboutLink" class="text-danger" href="about.html">このおみくじについて</a>
+        <span>|</span>
+        <a id="developersLink" class="text-danger" href="developers.html">開発者一覧</a>
+      </div>
+      <div class="text-center">
+        <small id="copyright">(仮)運勢占いおみくじ</small>
+      </div>
+    </footer>
 
-    <div>
-      <h4>✽ ラッキーエディタ ✽</h4>
-      <p id="luckyEditorText"></p>
-    </div>
 
-    <!-- もう一度おみくじを引く -->
-    <div>
-      <button id="retryButton">もう一度おみくじを引く</button>
-    </div>
-  </main>
 
-  <!-- フッター -->
-  <footer id="siteFooter" role="contentinfo">
-    <div>
-      <a id="aboutLink" href="about.html">このおみくじについて</a>
-      <span>|</span>
-      <a id="developersLink" href="developers.html">開発者一覧</a>
-    </div>
-    <small id="copyright">©ソフトウェア開発みくじ</small>
-  </footer>
 
-  <!-- JS -->
-  <script src="scripts-main.js" defer></script>
+    <!-- JS -->
+    <script src="scripts-div.js" defer></script>
+  </div>
 </body>
 </html>
