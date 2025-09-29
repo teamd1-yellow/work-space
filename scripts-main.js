@@ -263,8 +263,18 @@ function backToTopPage(){
 }
 
 function createOmikujiPage(omikuji){
-    let fortuneKanji = document.getElementById("resultFortuneKanji");
-    fortuneKanji.innerHTML = omikuji.unseiText;
+    let omikujiFortune = document.getElementById("omikuji-fortune");
+    omikujiFortune.innerHTML = omikuji.unseiText;
+    let omikujiMessage = document.getElementById("omikuji-message");
+    omikujiMessage.innerHTML = omikuji.message;
+    let omikujiFortuneImage = document.getElementById("omikuji-fortune-image");
+    omikujiFortuneImage.src = "assets/img/" + omikuji.unseiImage;
+    let omikujiLuckyLine = document.getElementById("omikuji-lucky-line");
+    omikujiLuckyLine.innerHTML = omikuji.rosen;
+    let omikujiLuckyDish = document.getElementById("omikuji-lucky-dish");
+    omikujiLuckyDish.innerHTML = omikuji.ryori;
+    let omikujiLuchySpot = document.getElementById("omikuji-lucky-spot");
+    omikujiLuchySpot.innerHTML = omikuji.spot;
 }
 
 //1-nの整数をランダムに生成
