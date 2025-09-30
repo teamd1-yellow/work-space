@@ -52,6 +52,7 @@ class Omikuji{
         let unseiText = "";
         switch(num){
             case 1:
+
                 unseiText = "大吉";
                 break;
             case 2:
@@ -79,6 +80,7 @@ class Omikuji{
         let image = "";
         switch(num){
             case 1:
+
                 image = "daikiti.png";
                 break;
             case 2:
@@ -106,6 +108,7 @@ class Omikuji{
         let message = "";
         switch(num){
             case 1:
+
                 message = "やることなすこと、すべてが上手くいく一日です。自信をもって、どんどん行動してみましょう。";
                 break;
             case 2:
@@ -161,6 +164,7 @@ class Omikuji{
                 break;
             case 10:
                 rosen = "湘南新宿ライン";
+
                 break;
         }
         return rosen;
@@ -172,6 +176,7 @@ class Omikuji{
         let ryori = "";
         switch(num){
             case 1:
+
                 ryori = "お寿司";
                 break;
             case 2:
@@ -206,6 +211,7 @@ class Omikuji{
                 break;
             case 12:
                 ryori = "麻婆豆腐";
+
                 break;
         }
         return ryori;
@@ -217,6 +223,7 @@ class Omikuji{
         let spot = "";
         switch(num){
             case 1:
+
                 spot = "展望台";
                 break;
             case 2:
@@ -245,6 +252,7 @@ class Omikuji{
                 break;
             case 10:
                 spot = "温泉";
+
                 break;
         }
         return spot;
