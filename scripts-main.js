@@ -52,22 +52,23 @@ class Omikuji{
         let unseiText = "";
         switch(num){
             case 1:
-                unseiText = "運１";
+
+                unseiText = "大吉";
                 break;
             case 2:
-                unseiText = "運２";
+                unseiText = "中吉";
                 break;
             case 3:
-                unseiText = "運３";
+                unseiText = "小吉";
                 break;
             case 4:
-                unseiText = "運４";
+                unseiText = "吉";
                 break;
             case 5:
-                unseiText = "運５";
+                unseiText = "末吉";
                 break;
             case 6:
-                unseiText = "運６";
+                unseiText = "凶";
                 break;
         }
         return unseiText;
@@ -79,22 +80,23 @@ class Omikuji{
         let image = "";
         switch(num){
             case 1:
-                image = "い１";
+
+                image = "daikiti.png";
                 break;
             case 2:
-                image = "い２";
+                image = "chukiti.png";
                 break;
             case 3:
-                image = "い３";
+                image = "syoukiti.png";
                 break;
             case 4:
-                image = "い４";
+                image = "kiti.png";
                 break;
             case 5:
-                image = "い５";
+                image = "suekiti.png";
                 break;
             case 6:
-                image = "い６";
+                image = "kyou.png";
                 break;
         }
         return image;
@@ -106,22 +108,23 @@ class Omikuji{
         let message = "";
         switch(num){
             case 1:
-                message = "め１";
+
+                message = "やることなすこと、すべてが上手くいく一日です。自信をもって、どんどん行動してみましょう。";
                 break;
             case 2:
-                message = "め２";
+                message = "努力がきちんと形になる、嬉しい一日です。自分のペースを大切にすれば、物事はスムーズに進みます。";
                 break;
             case 3:
-                message = "め３";
+                message = "小さな幸せを見つけられる、心温まる一日になりそう。いつもより少し周りをよく見てみましょう。";
                 break;
             case 4:
-                message = "め４";
+                message = "平穏で、落ち着いた一日。現状維持を心がけましょう。";
                 break;
             case 5:
-                message = "め５";
+                message = "これから運気は上がっていきます。今日の頑張りが、明日のあなたを助けてくれます。";
                 break;
             case 6:
-                message = "め６";
+                message = "ゆっくり休んで、エネルギーを充電しましょう。焦りは禁物です。";
                 break;
         }
         return message;
@@ -133,34 +136,35 @@ class Omikuji{
         let rosen = "";
         switch(num){
             case 1:
-                rosen = "ろ１";
+                rosen = "山手線";
                 break;
             case 2:
-                rosen = "ろ２";
+                rosen = "東急東横線";
                 break;
             case 3:
-                rosen = "ろ３";
+                rosen = "小田急線";
                 break;
             case 4:
-                rosen = "ろ４";
+                rosen = "中央線";
                 break;
             case 5:
-                rosen = "ろ５";
+                rosen = "ゆりかもめ"
                 break;
             case 6:
-                rosen = "ろ６";
+                rosen = "江ノ電";
                 break;
             case 7:
-                rosen = "ろ７";
+                rosen = "京王線";
                 break;
             case 8:
-                rosen = "ろ８";
+                rosen = "横須賀線";
                 break;
             case 9:
-                rosen = "ろ９";
+                rosen = "都電荒川線";
                 break;
             case 10:
-                rosen = "ろ１０";
+                rosen = "湘南新宿ライン";
+
                 break;
         }
         return rosen;
@@ -172,40 +176,42 @@ class Omikuji{
         let ryori = "";
         switch(num){
             case 1:
-                ryori = "り１";
+
+                ryori = "お寿司";
                 break;
             case 2:
-                ryori = "り２";
+                ryori = "ラーメン";
                 break;
             case 3:
-                ryori = "り３";
+                ryori = "カレーライス";
                 break;
             case 4:
-                ryori = "り４";
+                ryori = "天ぷら";
                 break;
             case 5:
-                ryori = "り５";
+                ryori = "うなぎの蒲焼き";
                 break;
             case 6:
-                ryori = "り６";
+                ryori = "焼き鳥";
                 break;
             case 7:
-                ryori = "り７";
+                ryori = "すき焼き";
                 break;
             case 8:
-                ryori = "り８";
+                ryori = "親子丼";
                 break;
             case 9:
-                ryori = "り９";
+                ryori = "餃子";
                 break;
             case 10:
-                ryori = "り１０";
+                ryori = "おにぎり";
                 break;
             case 11:
-                ryori = "り１１";
+                ryori = "担々麺";
                 break;
             case 12:
-                ryori = "り１２";
+                ryori = "麻婆豆腐";
+
                 break;
         }
         return ryori;
@@ -217,34 +223,36 @@ class Omikuji{
         let spot = "";
         switch(num){
             case 1:
-                spot = "す１";
+
+                spot = "展望台";
                 break;
             case 2:
-                spot = "す２";
+                spot = "公園";
                 break;
             case 3:
-                spot = "す３";
+                spot = "神社・お寺";
                 break;
             case 4:
-                spot = "す４";
+                spot = "美術館・博物館";
                 break;
             case 5:
-                spot = "す５";
+                spot = "カフェ";
                 break;
             case 6:
-                spot = "す６";
+                spot = "本屋";
                 break;
             case 7:
-                spot = "す７";
+                spot = "海・湖";
                 break;
             case 8:
-                spot = "す８";
+                spot = "商店街";
                 break;
             case 9:
-                spot = "す９";
+                spot = "動物園・水族館";
                 break;
             case 10:
-                spot = "す１０";
+                spot = "温泉";
+
                 break;
         }
         return spot;
