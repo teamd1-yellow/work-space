@@ -33,7 +33,7 @@ body {
   animation-duration: 5s;
 }
 
-/* アニメ */
+/* おみくじ箱アニメ */
 .animation{
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -109,10 +109,24 @@ ul li {
   list-style-type: none!important;
 }
 
-/* おみくじ結果の枠 */
+/* おみくじ結果の枠とy軸回転エフェクト */
 .resultBox {
     width: 350px;
     height: auto;
+    animation: rotateY 0.5s;
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform:rotateY(360deg);
+  }
+  
 }
 
  /* おみくじ結果（内枠のスタイル） */
@@ -134,6 +148,7 @@ ul li {
   border: solid 5px #db7093;
   z-index: -1;
 }
+
 
 /* 大吉～凶のフォントサイズ */
 .fortuneTitle {
