@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>(仮)運勢占いおみくじ</title>
+  <title>運勢占いみくじ</title>
   <meta name="description" content="息抜きに運勢占いをどうぞ">
 
   <!-- Bootstrap -->
@@ -27,17 +27,17 @@
   <div class="container d-flex align-item-center flex-column text-danger rocknroll-one-regular">
     <div id="heroSection">
       <div class="text-center mb-5">
-        <h1>(仮)運勢占い</h1>
-        <h1 class="mb-5">おみくじ</h1>
+        <h1 class="title">運勢占い</h1>
+        <h1 class="title mb-5">みくじ</h1>
       
         <!-- 画像 -->
-        <div class="mb-5">
-          <img id="omikujiImage" alt="おみくじ" />
+        <div class="my-5">
+          <img src="assets\omikuji.png" id="omikujiImage" alt="おみくじ" class="omikujiBako animation" />
         </div>
 
         <!-- 抽選ボタン -->
-        <div class="align-item-center mb-5">
-          <button id="drawButton" type="button" class="button-style">おみくじを引く</button>
+        <div class="drawBtn align-item-center mb-5">
+          <button type="button" id="drawButton" onclick="drawOmikuji();" class="button-style">おみくじを引く</button>
         </div>
       </div>
     </div>
@@ -47,43 +47,43 @@
         <!-- 結果画像（JSで src を設定） -->
         <div class="container d-flex justify-content-center align-items-center flex-column">
           <div class="resultBox d-flex bg-white align-items-center flex-column mb-4">
-            <img id="resultImage" alt="結果画像" class="mb-4" />
+            <img id="omikuji-fortune-image" alt="画像" class="mb-4" />
           
 
             <!-- 運勢(大吉/中吉…)-->
             <div class="mb-4 pb-1">
-              <h1 id="resultFortuneKanji" aria-live="polite" class="fortuneTitle text-center">吉</h1>
+              <h1 id="omikuji-fortune" aria-live="polite" class="fortuneTitle text-center"></h1>
               <hr width="300">
             </div>
 
             <!-- 本文 -->
-            <div class="px-5">
-              <p id="resultText">今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー今日はとてもラッキー</p>
+            <div>
+              <p id="omikuji-message" class="mx-3"></p>
               <hr width="300">
             </div>
 
             <!-- ラッキー系 -->
             <div class="luckyItems text-center mb-4">
               <div>
-                <h4 class="mb-4">✽ ラッキー言語 ✽</h4>
-                <p id="luckyLangText">*******</p>
+                <h5 class="mb-4">✽ ラッキー路線 ✽</h5>
+                <p id="omikuji-lucky-line"></p>
                 <hr width="300">
               </div>
 
               <div>
-                <h4 class="mb-4">✽ ラッキーデータベース ✽</h4>
-                <p id="luckyDbText">*******</p>
+                <h5 class="mb-4">✽ ラッキー料理 ✽</h5>
+                <p id="omikuji-lucky-dish"></p>
                 <hr width="300">
               </div>
 
               <div>
-                <h4 class="mb-4">✽ ラッキーエディタ ✽</h4>
-                <p id="luckyEditorText">*******</p>
+                <h5 class="mb-4">✽ ラッキースポット ✽</h5>
+                <p id="omikuji-lucky-spot"></p>
               </div>
             </div>
             <!-- もう一度おみくじを引く -->
             <div class="mb-4">
-              <button id="retryButton" type="button" class="button-style">もう一度おみくじを引く</button>
+              <button type="button" id="retryButton" onclick="backToTopPage();" class="button-style">もう一度おみくじを引く</button>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@
         <a id="developersLink" class="text-danger" href="developers.html">開発者一覧</a>
       </div>
       <div class="text-center">
-        <small id="copyright">(仮)運勢占いおみくじ</small>
+        <small id="copyright">©運勢占いみくじ</small>
       </div>
     </footer>
 
@@ -105,7 +105,7 @@
 
 
     <!-- JS -->
-    <script src="scripts-div.js" defer></script>
+    <script src="scripts-main.js" defer></script>
   </div>
 </body>
 </html>
