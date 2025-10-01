@@ -36,62 +36,65 @@
         </div>
 
         <!-- 抽選ボタン -->
-        <div class="drawBtn align-item-center mb-5">
+        <div class="drawBtn align-item-center mb-2">
           <button type="button" id="drawButton" onclick="drawOmikuji();" class="button-style">おみくじを引く</button>
         </div>
       </div>
     </div>
 
       <!-- 結果画面 -->
-      <div id="resultSection" class="d-none">
-        <!-- 結果画像（JSで src を設定） -->
-        <div class="container2 d-flex justify-content-center align-items-center flex-column">
-            <div class="resultBox anim d-flex bg-white align-items-center flex-column mb-4">
-              <img id="omikuji-fortune-image" alt="画像" class="resultImg my-3" />
-            
+        <div id="resultSection" class="d-none">
+            <!-- 結果画像（JSで src を設定） -->
+            <div class="container d-flex justify-content-center align-items-center flex-column">
+                <div class="resultBox anim d-flex bg-white align-items-center flex-column">
+                  <img id="omikuji-fortune-image" alt="画像" class="resultImg" />
+                
 
-              <!-- 運勢(大吉/中吉…)-->
-              <div class="pb-1">
-                <h1 id="omikuji-fortune" aria-live="polite" class="fortuneTitle text-center"></h1>
-                <hr width="300">
-              </div>
+                  <!-- 運勢(大吉/中吉…)-->
+                  <div>
+                    <h1 id="omikuji-fortune" aria-live="polite" class="fortuneTitle text-center"></h1>
+                  </div>
 
-              <!-- 本文 -->
-              <div>
-                <p id="omikuji-message" class="mx-3"></p>
-                <hr width="300">
-              </div>
+                  <!-- 本文 -->
+                    <div>
+                      <p class="text-center"></p>
+                      <p id="omikuji-message" class="mx-3"></p>
+                      <hr width="300">
+                    </div>
 
-              <!-- ラッキー系 -->
-              <div class="luckyItems text-center mb-4">
-                <div>
-                  <h5 class="mb-4">✽ ラッキー路線 ✽</h5>
-                  <p id="omikuji-lucky-line"></p>
-                  <hr width="300">
+                    <!-- ラッキー系 -->
+                    <div>
+                      <p class="mb-1 text-center">✽ ラッキー路線 ✽</p>
+                      <p id="omikuji-lucky-line" class="text-center"></p>
+                      <hr width="300">
+                    </div>
+
+                    <div>
+                      <p class="mb-1 text-center">✽ ラッキー料理 ✽</p>
+                      <p id="omikuji-lucky-dish" class="text-center"></p>
+                      <hr width="300">
+                    </div>
+
+                    <div>
+                      <p class="mb-1 text-center">✽ ラッキースポット ✽</p>
+                      <p id="omikuji-lucky-spot" class="text-center"></p>
+                    </div>
+
+                  <!-- もう一度おみくじを引く -->
+                  <div class="mb-1">
+                    <button type="button" id="retryButton" onclick="backToTopPage();" class="button-style">もう一度おみくじを引く</button>
+                  </div>
                 </div>
-
-                <div>
-                  <h5 class="mb-4">✽ ラッキー料理 ✽</h5>
-                  <p id="omikuji-lucky-dish"></p>
-                  <hr width="300">
-                </div>
-
-                <div>
-                  <h5 class="mb-4">✽ ラッキースポット ✽</h5>
-                  <p id="omikuji-lucky-spot"></p>
-                </div>
-              </div>
-              <!-- もう一度おみくじを引く -->
-              <div class="mb-4">
-                <button type="button" id="retryButton" onclick="backToTopPage();" class="button-style">もう一度おみくじを引く</button>
-              </div>
             </div>
         </div>
-      </div>
+
+
+
+
 
       <!-- フッター -->
       <footer id="siteFooter" role="contentinfo">
-        <div class="mb-4">
+        <div class="mb-2">
           <a id="aboutLink" class="text-danger" href="about.html">このおみくじについて</a>
           <span>|</span>
           <a id="developersLink" class="text-danger" href="developers.html">開発者一覧</a>
