@@ -276,7 +276,7 @@ function createOmikujiPage(omikuji){
     let omikujiMessage = document.getElementById("omikuji-message");
     omikujiMessage.innerHTML = omikuji.message;
     let omikujiFortuneImage = document.getElementById("omikuji-fortune-image");
-    omikujiFortuneImage.src = "assets/img/" + omikuji.unseiImage;
+    omikujiFortuneImage.src = "assets/" + omikuji.unseiImage;
     let omikujiLuckyLine = document.getElementById("omikuji-lucky-line");
     omikujiLuckyLine.innerHTML = omikuji.rosen;
     let omikujiLuckyDish = document.getElementById("omikuji-lucky-dish");
