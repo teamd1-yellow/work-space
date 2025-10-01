@@ -45,61 +45,61 @@
       <!-- 結果画面 -->
       <div id="resultSection" class="d-none">
         <!-- 結果画像（JSで src を設定） -->
-        <div class="container d-flex justify-content-center align-items-center flex-column">
-          <div class="resultBox anim d-flex bg-white align-items-center flex-column mb-4">
-            <img id="omikuji-fortune-image" alt="画像" class="mb-4" />
-          
+        <div class="container2 d-flex justify-content-center align-items-center flex-column">
+            <div class="resultBox anim d-flex bg-white align-items-center flex-column mb-4">
+              <img id="omikuji-fortune-image" alt="画像" class="resultImg my-3" />
+            
 
-            <!-- 運勢(大吉/中吉…)-->
-            <div class="mb-4 pb-1">
-              <h1 id="omikuji-fortune" aria-live="polite" class="fortuneTitle text-center"></h1>
-              <hr width="300">
-            </div>
-
-            <!-- 本文 -->
-            <div>
-              <p id="omikuji-message" class="mx-3"></p>
-              <hr width="300">
-            </div>
-
-            <!-- ラッキー系 -->
-            <div class="luckyItems text-center mb-4">
-              <div>
-                <h5 class="mb-4">✽ ラッキー路線 ✽</h5>
-                <p id="omikuji-lucky-line"></p>
+              <!-- 運勢(大吉/中吉…)-->
+              <div class="pb-1">
+                <h1 id="omikuji-fortune" aria-live="polite" class="fortuneTitle text-center"></h1>
                 <hr width="300">
               </div>
 
+              <!-- 本文 -->
               <div>
-                <h5 class="mb-4">✽ ラッキー料理 ✽</h5>
-                <p id="omikuji-lucky-dish"></p>
+                <p id="omikuji-message" class="mx-3"></p>
                 <hr width="300">
               </div>
 
-              <div>
-                <h5 class="mb-4">✽ ラッキースポット ✽</h5>
-                <p id="omikuji-lucky-spot"></p>
+              <!-- ラッキー系 -->
+              <div class="luckyItems text-center mb-4">
+                <div>
+                  <h5 class="mb-4">✽ ラッキー路線 ✽</h5>
+                  <p id="omikuji-lucky-line"></p>
+                  <hr width="300">
+                </div>
+
+                <div>
+                  <h5 class="mb-4">✽ ラッキー料理 ✽</h5>
+                  <p id="omikuji-lucky-dish"></p>
+                  <hr width="300">
+                </div>
+
+                <div>
+                  <h5 class="mb-4">✽ ラッキースポット ✽</h5>
+                  <p id="omikuji-lucky-spot"></p>
+                </div>
+              </div>
+              <!-- もう一度おみくじを引く -->
+              <div class="mb-4">
+                <button type="button" id="retryButton" onclick="backToTopPage();" class="button-style">もう一度おみくじを引く</button>
               </div>
             </div>
-            <!-- もう一度おみくじを引く -->
-            <div class="mb-4">
-              <button type="button" id="retryButton" onclick="backToTopPage();" class="button-style">もう一度おみくじを引く</button>
-            </div>
-          </div>
         </div>
       </div>
 
-    <!-- フッター -->
-    <footer id="siteFooter" role="contentinfo">
-      <div class="mb-4">
-        <a id="aboutLink" class="text-danger" href="about.html">このおみくじについて</a>
-        <span>|</span>
-        <a id="developersLink" class="text-danger" href="developers.html">開発者一覧</a>
-      </div>
-      <div class="text-center">
-        <small id="copyright">©運勢占いみくじ</small>
-      </div>
-    </footer>
+      <!-- フッター -->
+      <footer id="siteFooter" role="contentinfo">
+        <div class="mb-4">
+          <a id="aboutLink" class="text-danger" href="about.html">このおみくじについて</a>
+          <span>|</span>
+          <a id="developersLink" class="text-danger" href="developers.html">開発者一覧</a>
+        </div>
+        <div class="text-center">
+          <small id="copyright">©運勢占いみくじ</small>
+        </div>
+      </footer>
 
 
 
