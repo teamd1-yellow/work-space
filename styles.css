@@ -1,13 +1,7 @@
+/* 画面全体高さ、背景 */
 body {
     height: 100vh;
-    --dot-bg: rgb(255, 222, 244);
-    --dot-color: linear-gradient(to bottom, #ccf2fe 0%, #fe9b53 100%);
-    --dot-size: 2px;
-    --dot-space: 22px;
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
+    background-image: radial-gradient(circle, #fff 0% 35%,#c5f1dc 50% 55%, #efb63b 90% 100%);
 }
 
 /* google fonts */
@@ -24,37 +18,88 @@ body {
    height: 100vh;
 }
 
+/* titleサイズ固定 */
+.title {
+  font-size: 3.5rem;
+}
+
+/* おみくじ箱のトリミング・サイズ・傾き調整 */
+.omikujiBako {
+  object-view-box: inset(20px);
+  width: 70%;
+  height: auto;
+  animation-name: anim_s;
+  transform: rotate(20deg);
+  animation-duration: 5s;
+}
+
+/* おみくじ箱アニメ */
+.animation{
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  width: 128px;
+}
+
+@keyframes anim_s {
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.drawBtn {
+  margin-top: 70px;
+}
+
+/* h2サイズ固定 */
+h2 {
+  font-size: 2rem;
+}
+
+/* about,developersコンテンツ共通の位置調整 */
+.allContents {
+    position: relative;
+    top: 5%;
+}
+
+/* このおみくじについての枠 */
 .aboutBox {
     width: 400px;
     height: auto;
-    background: #fffde8;
-    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-    border: dashed 2px #ffb03f;/*破線*/
+    background: #f6e978;
+    box-shadow: 0px 0px 0px 10px #f6e978;/*線の外側*/
+    border: dashed 2px #f7693e;/*破線*/
     border-radius: 9px;
     margin-left: 10px;/*はみ出ないように調整*/
     margin-right: 10px;/*はみ出ないように調整*/
     padding: 5px 5px 5px 5px;
 }
 
+/* 開発者一覧の枠 */
 .developers {
     width: 250px;
     height: auto;
-    background: #fffde8;
-    box-shadow: 0px 0px 0px 10px #fffde8;/*線の外側*/
-    border: dashed 2px #ffb03f;/*破線*/
+    background: #ffc3c3;
+    box-shadow: 0px 0px 0px 10px #ffc3c3;/*線の外側*/
+    border: dashed 2px #f7693e;/*破線*/
     border-radius: 9px;
     margin-left: 10px;/*はみ出ないように調整*/
     margin-right: 10px;/*はみ出ないように調整*/
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
 }
 
+/* リストの調整（このおみくじについて＆開発者一覧） */
 ul{
     padding-left: 5px;
 }
 
 ul li {
   color: rgb(51, 50, 50);
-  border-left: solid 8px orange;/*左側の線*/
+  border-left: solid 8px rgb(242, 99, 99);/*左側の線*/
   background: whitesmoke;/*背景色*/
   border-bottom: solid 2px #dadada;/*下に灰色線*/
   margin-bottom: 15px;/*下のバーとの余白*/
@@ -64,18 +109,34 @@ ul li {
   list-style-type: none!important;
 }
 
+/* おみくじ結果の枠とy軸回転エフェクト */
 .resultBox {
-    width: 400px;
+    width: 350px;
     height: auto;
+    animation: rotateY 0.5s;
 }
 
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform:rotateY(360deg);
+  }
+  
+}
+
+ /* おみくじ結果（内枠のスタイル） */
 .resultBox {
   display: inline-block;
   position: relative;
   padding: 2px;
-  border: dashed 2px #de7d9e; /* 内枠のスタイル */
+  border: dashed 2px #de7d9e;
 }
- 
+  /* 外枠のスタイル */
 .resultBox::before {
   content: "";
   background-color: white;
@@ -84,15 +145,17 @@ ul li {
   bottom: -9px;
   left: -9px;
   right: -9px;
-  border: solid 5px #db7093; /* 外枠のスタイル */
+  border: solid 5px #db7093;
   z-index: -1;
 }
 
+
+/* 大吉～凶のフォントサイズ */
 .fortuneTitle {
     font-size: 5rem;
 }
 
-
+/* ボタン部分 */
 .button-style {
     background:#fd7403;
     color:#fff;
@@ -107,6 +170,7 @@ ul li {
 
 }
  
+/* ボタンホバー */
 .button-style:hover {
     background: transparent;
     color: #fd7403;
