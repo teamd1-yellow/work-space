@@ -18,6 +18,14 @@ body {
    height: 100vh;
 }
 
+/* おみくじ結果画面の全体表示設定 */
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 90vh;
+}
+
 /* titleサイズ固定 */
 .title {
   font-size: 3.5rem;
@@ -51,6 +59,7 @@ body {
   }
 }
 
+/* おみくじを引くボタンの位置調整 */
 .drawBtn {
   margin-top: 70px;
 }
@@ -149,6 +158,12 @@ ul li {
   z-index: -1;
 }
 
+/* 結果画像のトリミング、リサイズ */
+.resultImg {
+  object-view-box: inset(270px 50px 230px 50px);
+  width: 75%;
+  height: 75%;
+}
 
 /* 大吉～凶のフォントサイズ */
 .fortuneTitle {
