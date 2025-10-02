@@ -3,7 +3,7 @@
 **🔮「今日はどんな運勢？」を気軽にチェックできる、おみくじツールです。** 
 ボタンを押すだけで結果（大吉〜凶）と、**ラッキー路線・ラッキー料理・ラッキースポット**をお知らせします。
 
-## [**🧙‍♀️ここから占ってみる🪄**](https://github.com/teamd1-yellow/work-space)
+## [**🧙‍♀️ここから占ってみる🪄**](https://teamd1-yellow.github.io/work-space/)
 
 <img src="assets/readme-home.png" alt= "初期表示画面" width="350" height="200"> <img src="assets/readme-result.png" alt= "結果表示画面" width="350" height="200">
 
