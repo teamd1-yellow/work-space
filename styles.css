@@ -18,17 +18,9 @@ body {
    height: 100vh;
 }
 
-/* おみくじ結果画面の全体表示設定 */
-.container2 {
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  height: 90vh;
-}
-
 /* titleサイズ固定 */
 .title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 /* おみくじ箱のトリミング・サイズ・傾き調整 */
@@ -120,8 +112,9 @@ ul li {
 
 /* おみくじ結果の枠とy軸回転エフェクト */
 .resultBox {
-    width: 350px;
-    height: auto;
+    width: 300px;
+    height: 700px;
+    transform: scale(0.8);
     animation: rotateY 0.5s;
 }
 
@@ -160,14 +153,17 @@ ul li {
 
 /* 結果画像のトリミング、リサイズ */
 .resultImg {
-  object-view-box: inset(270px 50px 230px 50px);
-  width: 75%;
-  height: 75%;
+  object-view-box: inset(270px 50px 235px 50px);
+  width: 50%;
+  height: 50%;
 }
 
+hr {
+  text-align: center;
+}
 /* 大吉～凶のフォントサイズ */
 .fortuneTitle {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 /* ボタン部分 */
